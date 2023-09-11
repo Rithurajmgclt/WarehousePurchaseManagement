@@ -45,9 +45,9 @@ class PurchasetUploadCSVSerializer(serializers.Serializer):
 
             csv_reader = csv.reader(csv_content.splitlines())
             header = next(csv_reader)
-            # expected_header = ['Product Id', 'Purchased Id', 'Product Name','Purchased Qty','Price Per Quantity'] 
-            # if header != expected_header:
-            #     raise ValidationError("Invalid CSV format: Header does not match expected format.")
+            expected_header = ['Product Id', 'Purchased Id', 'Product Name','Purchased Qty','Price Per Quantity'] 
+            if header != expected_header:
+                raise ValidationError("Invalid CSV format: Header does not match expected format.")
 
         except Exception as e:
             raise ValidationError("Invalid CSV format: Unable to parse the CSV file.")

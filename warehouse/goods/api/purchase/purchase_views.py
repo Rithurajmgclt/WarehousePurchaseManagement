@@ -63,8 +63,8 @@ class PurchaseViewset(viewsets.ModelViewSet):
             try:
                 csv_content = serializer.csv_content
                 csv_reader = csv.reader(csv_content.splitlines())
-                csv_reader = list(csv_reader)
-                thread1 = threading.Thread(target=self.unique_data_list, args=(csv_reader))
+                csv_reader_list = list(csv_reader)
+                thread1 = threading.Thread(target=self.unique_data_list, args=(csv_reader_list,))
                 thread1.start()
                 return Response({'msg':"succussful upload"}, status= status.HTTP_200_OK)
             except Exception as e:
