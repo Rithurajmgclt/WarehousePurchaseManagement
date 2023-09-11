@@ -1,4 +1,9 @@
 # WarehousePurchaseManagement
+#deatils
+this is a projrect to manage products in a warehouse u can create product in backend list and  edit the same, 
+purchase order can create online for each product, offile puchase can aslo do and csv of the purchase can be uploaded to back end.
+proct stock will be reduced on each purchse
+we can refill the stock of each product if needed
 
 #basic
 create virtual enviornment  active it .
