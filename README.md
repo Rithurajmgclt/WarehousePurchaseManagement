@@ -13,7 +13,7 @@ to run the server use "python manage.py runserver"
 
 
 #api =>
-  swagger is added no need of postman to test
+  swagger is added no need of postman to test, 
 localhost/swagger url will lead you to api page
 
 note =>
